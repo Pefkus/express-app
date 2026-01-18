@@ -24,3 +24,7 @@ jobs:
           context: .
           push: true
           tags: pefkus/express-app:latest
+
+      # --- NOWA CZĘŚĆ ---
+      - name: Trigger deployment on Render
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
